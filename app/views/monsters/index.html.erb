@@ -1,0 +1,4 @@
+<h1>HECKA MONSTERS!!!!!</h1>
+<% @monsters.each do |monster| %>
+  <p><a href="<%=monster_path(monster)%>"><%= monster.name %></a></p>
+<% end %>

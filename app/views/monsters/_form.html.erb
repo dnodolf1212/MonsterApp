@@ -1,0 +1,9 @@
+<%= form_for monster do |f| %> 
+  <%= f.label "Name the Monster" %> 
+  <%= f.text_field :name %>
+  <%= f.label "Scare Factor" %> 
+  <%= f.number_field :scare_factor %>
+  <%= f.label "What Does it Hunger For?!" %> 
+  <%= f.text_field :hunger %>
+  <%= f.submit %>
+<% end %>

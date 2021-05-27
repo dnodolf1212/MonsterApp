@@ -13,8 +13,12 @@ class MonstersController < ApplicationController
   end
 
   def create 
-    monster = Monster.create(monster_params)
-    redirect_to monster_path(monster)
+    @monster = Monster.new(monster_params)
+    if @monster.save
+      redirect_to monster_path(@monster)
+    else 
+      render :new
+    end
   end
 
   def edit;end
